@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Add Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Select a category</mat-label>
+            <mat-select formControlName="categoryId" name="categoryId">
+                <mat-option *ngFor="let category of listOfCategories" [value]="category.id">
+                    {{category.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="productForm.get('categoryId')?.hasError('required')">
+                Please select a category
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Product Name</mat-label>
+            <input matInput type="text" placeholder="Product Name" formControlName="name" />
+            <mat-error *ngIf="productForm.get('name')?.hasError('required')">
+                Please input a valid name
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Product price</mat-label>
+            <input matInput type="number" placeholder="Product price" formControlName="price" />
+            <mat-error *ngIf="productForm.get('price')?.hasError('required')">
+                Please input a valid name
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Prodcut Description</mat-label>
+            <textarea matInput placeholder="Product description" formControlName="description"></textarea>
+
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Product</button>
+    </form>
+</div>

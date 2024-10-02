@@ -1,0 +1,94 @@
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.search-input {
+    width: 50%;
+    /* Adjust the width based on your needs */
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    margin: 16px;
+}
+
+.product-card {
+    width: 300px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details {
+    margin-bottom: 16px;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-value {
+    color: #3f51b5;
+}
+
+mat-divider {
+    margin: 16px 0;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-button {
+    background-color: #3f51b5;
+    /* Matches the color in the .container */
+    color: white;
+
+    &:hover {
+        background-color: darken(#3f51b5, 10%);
+    }
+}
+
+.delete-button {
+    background-color: #f44336;
+    /* Warn color stays consistent */
+    color: white;
+
+    &:hover {
+        background-color: darken(#f44336, 10%);
+    }
+}
